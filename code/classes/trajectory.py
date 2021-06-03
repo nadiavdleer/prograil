@@ -5,6 +5,7 @@ class Trajectory:
         self.start = start
         self.end = None
         self.connections = []
+        self.total_time = 0
 
     # add a connection to the trajectory
     def add_connection(self, connection):

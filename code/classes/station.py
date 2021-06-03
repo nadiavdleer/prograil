@@ -4,6 +4,7 @@ class Station:
         self.x = x
         self.y = y
         self.name = name
+        self.connections = []
         
     # return all connections from station
     def get_connection(self):
@@ -18,3 +19,4 @@ class Station:
 
     def __str__(self):
         return f"{self.name}"
+

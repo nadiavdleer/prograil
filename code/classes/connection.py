@@ -10,8 +10,5 @@ class Connection:
     def set_traveled(self):
         self.traveled = True
 
-    def is_traveled(self):
-        return self.traveled
-
     def __str__(self):
-        return f"from: {self.station1} to: {self.station2}"
+        return f"{self.station1} - {self.station2} : {self.time} minutes"
