@@ -6,7 +6,7 @@ def map(stations, connections, trajectories):
     station_names = []
     station_x = []
     station_y = []
-    trajectories = []
+    
 
     # Sarah & Nadia
     # add stations info

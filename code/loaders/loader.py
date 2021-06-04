@@ -32,13 +32,19 @@ def load_holland():
 
         connection = Connection(time, station1, station2)
         connections.append(connection)
+
+        # add connection to station object
+        stations[station1].connections.append(connection)
+        stations[station2].connections.append(connection)
+
         print(connection)
     
     # test trajectory
     test_trajectory = Trajectory(stations['Alkmaar'])
-    test_trajectory.add_connection(Connection(station1="Alkmaar", station2="Hoorn"))
+    test_trajectory.add_connection(stations["Alkmaar"].connections[0])
+    test_trajectory.remove_connection(stations["Alkmaar"].connections[0])
 
     print(test_trajectory)
 
     # show map of stations and connections 
-    map(stations, connections, test_trajectory)
+    map(stations, connections, [test_trajectory])
