@@ -22,11 +22,11 @@ def map(stations, connections, trajectories):
         plt.annotate(txt, (station_x[i], station_y[i]))
 
     for connection in connections:
-        station1 = stations[connection.station1]
+        station1 = connection.station1
         x1 = station1.x
         y1 = station1.y
 
-        station2 = stations[connection.station2]
+        station2 = connection.station2
         x2 = station2.x
         y2 = station2.y
 
@@ -43,11 +43,11 @@ def map(stations, connections, trajectories):
     c = 0
     for trajectory in trajectories:
         for connection in trajectory.connections:
-            station1 = stations[connection.station1]
+            station1 = connection.station1
             x1 = station1.x
             y1 = station1.y
 
-            station2 = stations[connection.station2]
+            station2 = connection.station2
             x2 = station2.x
             y2 = station2.y
 

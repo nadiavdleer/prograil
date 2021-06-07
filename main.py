@@ -2,6 +2,7 @@ from code.classes.connection import Connection
 from code.classes.station import Station
 from code.classes.trajectory import Trajectory
 from code.loaders.loader import load_holland
+from baseline import baseline
 
 def quality(connections, trajectories):
     p = 0
@@ -24,6 +25,6 @@ def quality(connections, trajectories):
 
 
 if __name__ == "__main__":
-    load_holland()
-
+    stations, connections = load_holland()
     
+    baseline(connections, stations)

@@ -19,32 +19,35 @@ def load_holland():
         
         station = Station(x, y, name)
         stations[station.name] = station
-        print(station)
+        # print(station)
 
 
     # open connections file
     connections_file = csv.DictReader(open("./data/noord-zuid-holland/ConnectiesHolland.csv"))
 
     for row in connections_file:
-        station1 = row["station1"]
-        station2 = row["station2"]
+        station1 = stations[row["station1"]]
+        station2 = stations[row["station2"]]
         time = int(row["distance"])
 
         connection = Connection(time, station1, station2)
         connections.append(connection)
 
         # add connection to station object
-        stations[station1].connections.append(connection)
-        stations[station2].connections.append(connection)
+        stations[station1.name].connections.append(connection)
+        stations[station2.name].connections.append(connection)
 
-        print(connection)
+        # print(connection)
     
     # test trajectory
     test_trajectory = Trajectory(stations['Alkmaar'])
     test_trajectory.add_connection(stations["Alkmaar"].connections[0])
     test_trajectory.remove_connection(stations["Alkmaar"].connections[0])
 
-    print(test_trajectory)
+    # print(test_trajectory)
+    
 
     # show map of stations and connections 
-    map(stations, connections, [test_trajectory])
+    # map(stations, connections, [test_trajectory])
+
+    return stations, connections

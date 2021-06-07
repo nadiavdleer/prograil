@@ -2,8 +2,8 @@
 class Trajectory:
     # start = station object
     def __init__(self, start):              
-        self.start = start.name
-        self.end = start.name
+        self.start = start
+        self.end = start
         self.connections = []
         self.total_time = 0
 
