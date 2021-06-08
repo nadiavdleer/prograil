@@ -14,13 +14,11 @@ def baseline(connections, stations):
     trajectories = []
     used_connections = []
     # available_stations = copy.deepcopy(stations)
-    available_connections = connections
+    # available_connections = connections
 
     while len(used_connections) != len(connections):
-        while True:
-            start_station = random.choice(list(stations.values()))
-            if len(start_station.connections) >= 2:
-                break
+        start_station = random.choice(list(stations.values()))
+
         # start trajectory
         trajectory = Trajectory(start_station)
 
@@ -31,7 +29,7 @@ def baseline(connections, stations):
                 if not connection.traveled:
                     if new_connection == None or connection.time < new_connection.time:
                         new_connection = connection
-            
+            # print(new_connection)
             # end trajectory if no possible route
             if new_connection == None:
                 if trajectory.total_time == 0:
@@ -48,11 +46,11 @@ def baseline(connections, stations):
             # ensure max 2h trajectory
             if trajectory.total_time > 120:
                 trajectory.remove_connection(new_connection)
+                new_connection.traveled = False
+                used_connections.remove(new_connection)
                 trajectories.append(trajectory)
                 break
-    
-    print("AANTAL TRA:")
-    print(len(trajectories))
+
     map(stations, connections, trajectories)
     
     return trajectories

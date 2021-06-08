@@ -39,7 +39,7 @@ def map(stations, connections, trajectories):
         # create lines between connections
         plt.plot([x1,x2], [y1,y2], color=color)
 
-    colors = ["indigo", "gold", "coral", "seagreen", "saddlebrown", "burlywood", "palevioletred", "grey", "darkkhaki", "orange", "tomato", "darkslategrey", "deeppink", "slategrey", "olive", "lime", "lightgreen", "sienna", "wheat", "firebrick"]
+    colors = ["tomato", "firebrick", "palevioletred", "coral", "deeppink", "orange", "gold", "lime", "lightgreen", "olive", "darkkhaki", "seagreen", "burlywood", "saddlebrown", "sienna", "wheat", "darkslategrey", "slategrey", "grey"]
     c = 0
     for trajectory in trajectories:
         for connection in trajectory.connections:

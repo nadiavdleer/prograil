@@ -5,26 +5,6 @@ from code.loaders.loader import load_holland
 from baseline import baseline
 from code.algorithms.quality import quality
 
-# def quality(connections, trajectories):
-#     p = 0
-#     total_connections = 0
-#     total_trajectories = 0
-#     for connection in connections:
-#         total_connections += 1
-#         print("Connect plus 1")
-#         if connection.traveled == True:
-#             p += 1
-#     p = p / total_connections
-
-#     T = 0
-#     Min = 0
-#     for trajectory in trajectories:
-#         T += 1
-#         Min += trajectory.total_time        
-        
-#     K = p*10000 - (T*100 + Min)
-#     return K
-
 
 if __name__ == "__main__":
     stations, connections = load_holland()
@@ -33,4 +13,17 @@ if __name__ == "__main__":
 
     score = quality(connections, trajectories)
 
+    print("   o O___ _________")
+    print(" _][__|o| |O O O O|")
+    print("<_______|-|_______|")
+    print(" /O-O-O     o   o")
+    print("----------------------")
+    print(f"Aantal trajecten: {len(trajectories)}")
+    print("----------------------")
     print(f"Score: {score}")
+    print("----------------------")
+    print("   o O___ _________")
+    print(" _][__|o| |O O O O|")
+    print("<_______|-|_______|")
+    print(" /O-O-O     o   o")
+    print("----------------------")
