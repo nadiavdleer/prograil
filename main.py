@@ -3,28 +3,34 @@ from code.classes.station import Station
 from code.classes.trajectory import Trajectory
 from code.loaders.loader import load_holland
 from baseline import baseline
+from code.algorithms.quality import quality
 
-def quality(connections, trajectories):
-    p = 0
-    total_connections = 0
-    total_trajectories = 0
-    for connection in connections:
-        total_connections += 1
-        if connection.traveled == True:
-            p += 1
-    p = p / total_connections
+# def quality(connections, trajectories):
+#     p = 0
+#     total_connections = 0
+#     total_trajectories = 0
+#     for connection in connections:
+#         total_connections += 1
+#         print("Connect plus 1")
+#         if connection.traveled == True:
+#             p += 1
+#     p = p / total_connections
 
-    T = 0
-    Min = 0
-    for trajectory in trajectories:
-        T += 1
-        Min += trajectory.total_time        
+#     T = 0
+#     Min = 0
+#     for trajectory in trajectories:
+#         T += 1
+#         Min += trajectory.total_time        
         
-    K = p*10000 - (T*100 + Min)
-    return K
+#     K = p*10000 - (T*100 + Min)
+#     return K
 
 
 if __name__ == "__main__":
     stations, connections = load_holland()
-    
-    baseline(connections, stations)
+
+    trajectories = baseline(connections, stations)
+
+    score = quality(connections, trajectories)
+
+    print(f"Score: {score}")

@@ -12,40 +12,47 @@ import random
 # Anne, Nadia, Sarah
 def baseline(connections, stations):
     trajectories = []
-    available_stations = copy.deepcopy(stations)
+    used_connections = []
+    # available_stations = copy.deepcopy(stations)
+    available_connections = connections
 
-    while True:
-        start_station = random.choice(list(available_stations.values()))
-        if len(start_station.connections) >= 2:
-            break
-    # start trajectory
-    trajectory = Trajectory(start_station)
+    while len(used_connections) != len(connections):
+        while True:
+            start_station = random.choice(list(stations.values()))
+            if len(start_station.connections) >= 2:
+                break
+        # start trajectory
+        trajectory = Trajectory(start_station)
 
-    # add connections
-    while True:
-        new_connection = None
-        for connection in trajectory.end.connections:
-            if not connection.traveled:
-                if new_connection == None or connection.time < new_connection.time:
-                    new_connection = connection
-        
-        if new_connection == None:
-            break
+        # add connections
+        while True:
+            new_connection = None
+            for connection in trajectory.end.connections:
+                if not connection.traveled:
+                    if new_connection == None or connection.time < new_connection.time:
+                        new_connection = connection
+            
+            # end trajectory if no possible route
+            if new_connection == None:
+                if trajectory.total_time == 0:
+                    break
+                trajectories.append(trajectory)
+                break
 
-        # add new connection to trajectory and set traveled
-        print(new_connection)
-        print(new_connection.traveled)
-        trajectory.add_connection(new_connection)
-        new_connection.set_traveled()
-        
-        # ensure max 2h trajectory
-        if trajectory.total_time > 120:
-            trajectory.remove_connection(new_connection)
-            break
-
-    print(trajectory)
-    print(trajectory.total_time)
-    print(trajectory.connections)
+            # add new connection to trajectory and set traveled
+            trajectory.add_connection(new_connection)
+            new_connection.set_traveled()
+            used_connections.append(new_connection)
+            # available_connections.remove(new_connection)
+            
+            # ensure max 2h trajectory
+            if trajectory.total_time > 120:
+                trajectory.remove_connection(new_connection)
+                trajectories.append(trajectory)
+                break
     
-    map(stations, connections, [trajectory])
-   
+    print("AANTAL TRA:")
+    print(len(trajectories))
+    map(stations, connections, trajectories)
+    
+    return trajectories
