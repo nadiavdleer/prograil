@@ -1,0 +1,17 @@
+Samenwerking ProgRail
+
+1 juni
+Nadia heeft een repository aangemaakt voor het project. Met z'n allen besloten dat we gaan werken met de LiveShare Tool van VSCode. Het werkt heel erg goed. We zijn erg tevreden met deze manier van samenwerken. We hebben toestemming gevraagd om zo te werken. Jelle is hiermee akkoord gegaan.
+
+3 juni
+Sarah heeft wat eerste bestanden aangemaakt.
+Sarah, Nadia en Anne hebben gewerkt aan de classes, map function en een eerste test met een trajectory.
+
+4 juni
+Sarah, Nadia en Anne hebben remove functie geschreven, connections bij Station toegevoegd en de map function aangepast want de database was verkeerd aangeleverd.
+
+7 juni
+Anne, Nadia en Sarah een trajectory kunnen genereren. Een eerste opzet voor onze baseline.
+
+8 juni
+Anne, Nadia en Sarah hebben voor de baseline de quality functie verbeterd en geimplementeerd. Daarnaast op basis van wat veranderingen in de code, de map function aangepast. En de baseline afgerond. Die geeft nu meerdere trajectories, zodat alle connecties worden bereden. Ook hebben we een plan gemaakt voor het pdf, dat op woensdag zal worden ingeleverd. We zijn van plan hier allemaal deels aan te werken en gaan gebruik maken van een Google Docs. Hierover, later meer.
