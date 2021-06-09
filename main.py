@@ -14,9 +14,9 @@ if __name__ == "__main__":
     score = quality(connections, trajectories)
 
     with open('output.csv', 'w') as file:
-        writer = csv.writer(file, delimiter=" ")
-        writer.writerow(["Trajecten:", len(trajectories)])
-        writer.writerow(["Score:", score])
+        writer = csv.writer(file)
+        writer.writerow([f"Trajecten: {len(trajectories)}"])
+        writer.writerow([f"Score: {score}"])
 
     print("   o O___ _________")
     print(" _][__|o| |O O O O|")
