@@ -20,3 +20,7 @@ Tezamen probleem gevonden waarom gereisde tijd niet overeenkomt met totale conne
 9 juni
 Anne heeft achtergrond kaart in visualisatie toegevoegd.
 Sarah heeft een in main code geschreven om een output file te maken. 
+Nadia heeft de tekst geschreven voor de uitleg van de resultaten van de baseline.
+
+10 juni
+Mentorgesprek en aanpassingen aan output. 
