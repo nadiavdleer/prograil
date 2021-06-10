@@ -15,7 +15,7 @@ def map(stations, connections, trajectories):
     station_y = []
 
     # start map background
-    figure = plt.figure(figsize=(7,6))
+    figure = plt.figure()
     ax = figure.add_subplot(1,1,1, projection=crs.PlateCarree())
     ax.add_feature(cfeature.COASTLINE)
     ax.add_feature(cfeature.LAND)
