@@ -1,2 +1,10 @@
-Trajecten: 9
-Score: 8719.0
+train,stations
+1,"['Heemstede-Aerdenhout', 'Haarlem', 'Amsterdam Sloterdijk', 'Amsterdam Centraal', 'Amsterdam Amstel', 'Amsterdam Zuid', 'Schiphol Airport', 'Leiden Centraal', 'Delft', 'Schiedam Centrum', 'Rotterdam Centraal', 'Rotterdam Alexander', 'Gouda', 'Den Haag Centraal']"
+2,"['Den Helder', 'Alkmaar', 'Castricum', 'Zaandam', 'Amsterdam Sloterdijk', 'Amsterdam Zuid']"
+3,"['Castricum', 'Beverwijk', 'Haarlem']"
+4,"['Beverwijk', 'Zaandam', 'Hoorn', 'Alkmaar']"
+5,"['Gouda', 'Den Haag Centraal']"
+6,"['Leiden Centraal', 'Heemstede-Aerdenhout']"
+7,"['Leiden Centraal', 'Alphen a/d Rijn', 'Gouda']"
+8,"['Dordrecht', 'Rotterdam Centraal']"
+score,8819.0

@@ -2,7 +2,7 @@ from code.classes.station import Station
 from code.classes.connection import Connection
 from code.classes.trajectory import Trajectory
 import csv
-from ..visualisation.map import map
+# from ..visualisation.map import map
 
 # Nadia, Anne, Sarah
 def load_holland():

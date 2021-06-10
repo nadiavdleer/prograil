@@ -5,7 +5,7 @@
 from code.classes.trajectory import Trajectory
 from code.classes.connection import Connection
 from code.classes.station import Station
-from code.visualisation.map import map
+# from code.visualisation.map import map
 import copy
 import random
 
