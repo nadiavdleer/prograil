@@ -3,7 +3,7 @@ from code.classes.station import Station
 from code.classes.trajectory import Trajectory
 from code.classes.timetable import Timetable
 from code.loaders.loader import load_holland
-from baseline import baseline
+from code.algorithms.baseline import baseline
 import csv
 
 if __name__ == "__main__":
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         writer = csv.writer(file)
         writer.writerow(header)
         for trajectory in trajectories:
-            writer.writerow([number, trajectory.itinerary])
+            writer.writerow([f"train_{number}", trajectory.itinerary])
             number += 1
         writer.writerow(["score", score])
 
