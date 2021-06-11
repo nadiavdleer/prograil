@@ -23,7 +23,8 @@ Sarah heeft een in main code geschreven om een output file te maken.
 Nadia heeft de tekst geschreven voor het begeleidende document van de baseline.
 
 10 juni
-Anne en Sarah hebben output veranderd, extra class aangemaakt voor timetables en rep opgeschoond.
+Overleg in de ochtend, mentorgesprek verplaatst naar de middag. Nadia had sollicitatie in de middag dus kon hier niet bij zijn.
+Anne en Sarah hebben naar aanleidng van dit gesprek de output veranderd, extra class aangemaakt voor timetables en rep opgeschoond.
 
 11 juni
 Anne, Sarah en Nadia: brainstorm over algo.
