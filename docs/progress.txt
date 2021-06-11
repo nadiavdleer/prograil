@@ -14,9 +14,16 @@ Sarah, Nadia en Anne hebben remove functie geschreven, connections bij Station t
 Anne, Nadia en Sarah een trajectory kunnen genereren. Een eerste opzet voor onze baseline.
 
 8 juni
-Anne, Nadia en Sarah hebben voor de baseline de quality functie verbeterd en geimplementeerd. Daarnaast op basis van wat veranderingen in de code, de map function aangepast. En de baseline afgerond. Die geeft nu meerdere trajectories, zodat alle connecties worden bereden. Ook hebben we een plan gemaakt voor het pdf, dat op woensdag zal worden ingeleverd. We zijn van plan hier allemaal deels aan te werken en gaan gebruik maken van een Google Docs. Hierover, later meer.
+Anne, Nadia en Sarah hebbenc voor de baseline de quality functie verbeterd en geimplementeerd. Daarnaast op basis van wat veranderingen in de code, de map function aangepast. En de baseline afgerond. Die geeft nu meerdere trajectories, zodat alle connecties worden bereden. Ook hebben we een plan gemaakt voor het pdf, dat op woensdag zal worden ingeleverd. We zijn van plan hier allemaal deels aan te werken en gaan gebruik maken van een Google Docs. Hierover, later meer.
 Tezamen probleem gevonden waarom gereisde tijd niet overeenkomt met totale connectie tijd. Laatste connectie wordt niet toegevoegd met add_trajectory. Dit kwam omdat we de connectie op traveled hielden staan, waardoor ons algoritme deze connectie niet meer opnieuw kon gebruiken.
 
 9 juni
 Anne heeft achtergrond kaart in visualisatie toegevoegd.
 Sarah heeft een in main code geschreven om een output file te maken. 
+
+10 juni
+Anne en Sarah hebben output veranderd, extra class aangemaakt voor timetables en rep opgeschoond.
+
+11 juni
+Anne, Sarah en Nadia: brainstorm over algo.
+Anne en Sarah: Check50 kwam er niet helemaal goed door, dus kleine aanpassing gemaakt aan "remove connection" functie.

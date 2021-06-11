@@ -16,9 +16,11 @@ class Trajectory:
         if self.end == connection.station1:
             self.end = connection.station2
             self.itinerary.append(self.end.name)
-        else:
+            print(f"{self.itinerary}")
+        elif self.end == connection.station2:
             self.end = connection.station1
             self.itinerary.append(self.end.name)
+            print(f"{self.itinerary}")
 
     # remove connections
     def remove_connection(self, connection):
@@ -28,10 +30,10 @@ class Trajectory:
         # end remove
         if self.end == connection.station1:
             self.end = connection.station2
-            self.itinerary.remove(connection.station1.name)
+            del self.itinerary[-1]
         elif self.end == connection.station2:
             self.end = connection.station1
-            self.itinerary.remove(connection.station2.name)
+            del self.itinerary[-1]
 
         # remove from start
         elif self.start == connection.station1:

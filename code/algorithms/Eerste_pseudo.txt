@@ -1,0 +1,11 @@
+def depth_first(state, depth):
+    if len(state) < depth:
+    for i in ["l", "r"]:
+    depth_first(state + i, depth)
+
+depth_first("", 3)
+
+wat is onze depth
+
+s.translate(None, string.punctuation)
+

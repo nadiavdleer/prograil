@@ -14,6 +14,9 @@ if __name__ == "__main__":
     new_timetable = Timetable(trajectories)
     score = new_timetable.quality(connections)
 
+    for trajectory in trajectories:
+        for connection in trajectory.connections:
+            print(connection)
 
     header = ["train", "stations"]
     number = 1
