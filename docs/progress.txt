@@ -27,3 +27,4 @@ Anne en Sarah hebben output veranderd, extra class aangemaakt voor timetables en
 11 juni
 Anne, Sarah en Nadia: brainstorm over algo.
 Anne en Sarah: Check50 kwam er niet helemaal goed door, dus kleine aanpassing gemaakt aan "remove connection" functie.
+Anne en Sarah: eerste opzet, eerste algo geschreven, algo functioneert, maar mag nog netter. 

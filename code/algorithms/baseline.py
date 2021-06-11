@@ -29,7 +29,7 @@ def baseline(connections, stations):
                 if not connection.traveled:
                     if new_connection == None or connection.time < new_connection.time:
                         new_connection = connection
-            # print(new_connection)
+            
             # end trajectory if no possible route
             if new_connection == None:
                 if trajectory.total_time == 0:
@@ -41,7 +41,7 @@ def baseline(connections, stations):
             trajectory.add_connection(new_connection)
             new_connection.set_traveled()
             used_connections.append(new_connection)
-            # available_connections.remove(new_connection)
+            
             
             # ensure max 2h trajectory
             if trajectory.total_time > 120:
@@ -51,6 +51,6 @@ def baseline(connections, stations):
                 trajectories.append(trajectory)
                 break
 
-    map(stations, connections, trajectories)
-    
+    #map(stations, connections, trajectories)
+   
     return trajectories

@@ -1,6 +1,8 @@
 class Timetable:
     def __init__(self, trajectories):
         self.trajectories = trajectories
+        self.score = 0
+        self.traveled_connections = []
 
     def quality(self, connections):
         p = 0
@@ -22,6 +24,11 @@ class Timetable:
             Min += trajectory.total_time 
             # print(trajectory)
             # print(trajectory.total_time)
-            
+    
+        print(f"p:{p}")
+        print(f"T:{T}")
+
         K = p*10000 - (T*100 + Min)
         return K
+
+    
