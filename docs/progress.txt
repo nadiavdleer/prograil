@@ -14,7 +14,7 @@ Sarah, Nadia en Anne hebben remove functie geschreven, connections bij Station t
 Anne, Nadia en Sarah een trajectory kunnen genereren. Een eerste opzet voor onze baseline.
 
 8 juni
-Anne, Nadia en Sarah hebbenc voor de baseline de quality functie verbeterd en geimplementeerd. Daarnaast op basis van wat veranderingen in de code, de map function aangepast. En de baseline afgerond. Die geeft nu meerdere trajectories, zodat alle connecties worden bereden. Ook hebben we een plan gemaakt voor het pdf, dat op woensdag zal worden ingeleverd. We zijn van plan hier allemaal deels aan te werken en gaan gebruik maken van een Google Docs. Hierover, later meer.
+Anne, Nadia en Sarah hebben voor de baseline de quality functie verbeterd en geimplementeerd. Daarnaast op basis van wat veranderingen in de code, de map function aangepast. En de baseline afgerond. Die geeft nu meerdere trajectories, zodat alle connecties worden bereden. Ook hebben we een plan gemaakt voor het pdf, dat op woensdag zal worden ingeleverd. We zijn van plan hier allemaal deels aan te werken en gaan gebruik maken van een Google Docs. Hierover, later meer.
 Tezamen probleem gevonden waarom gereisde tijd niet overeenkomt met totale connectie tijd. Laatste connectie wordt niet toegevoegd met add_trajectory. Dit kwam omdat we de connectie op traveled hielden staan, waardoor ons algoritme deze connectie niet meer opnieuw kon gebruiken.
 
 9 juni
@@ -23,11 +23,15 @@ Sarah heeft een in main code geschreven om een output file te maken.
 Nadia heeft de tekst geschreven voor het begeleidende document van de baseline.
 
 10 juni
-Overleg in de ochtend, mentorgesprek verplaatst naar de middag. Nadia had sollicitatie in de middag dus kon hier niet bij zijn.
-Anne en Sarah hebben naar aanleidng van dit gesprek de output veranderd, extra class aangemaakt voor timetables en rep opgeschoond.
+Nadia, Sarah en Anne overleg in de ochtend. Mentorgesprek verplaatst naar de middag. Nadia had sollicitatie in de middag dus kon hier niet bij zijn.
+Anne en Sarah hebben naar aanleiding van dit gesprek de output veranderd, extra class aangemaakt voor timetables en rep opgeschoond.
 
 11 juni
 Anne, Sarah en Nadia: brainstorm, pseudocode over algo.
 Anne en Sarah: Check50 kwam er niet helemaal goed door, dus kleine aanpassing gemaakt aan "remove connection" functie.
 Anne en Sarah: eerste opzet, eerste algo geschreven, algo functioneert, maar mag nog netter. 
+Nadia opschonen repo.
 
+14 juni
+Anne, Sarah en Nadia hebben samen afgesproken en wederom via Live Share gewerkt. Dit keer aan verbetering van first_algorithm, zodat het ook werkt voor heel Nederland.
+Anne, Sarah en Nadia hebben command line arguments ingesteld zodat de gebruiker kan kiezen voor Holland of Nederland. De map heeft nu ook twee verschillende achtergronden; eentje voor Holland en eentje voor heel Nederland.

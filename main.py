@@ -2,26 +2,39 @@ from code.loaders.loader import load_holland, load_nationaal
 from code.algorithms.first_algorithm import first_algorithm
 from code.visualisation.map import map
 import csv
+from sys import argv
 
 if __name__ == "__main__":
-    # stations, connections = load_holland()
-    # max_time = 120
-    # max_trajectories = 7
-    # timetable = first_algorithm(connections, stations, max_time, max_trajectories)
-    # score = timetable.score
 
-    stations, connections = load_nationaal()
-    max_time = 180
-    max_trajectories = 20
-    timetable = first_algorithm(connections, stations, max_time, max_trajectories)
+    # check command line arguments
+    if len(argv) is not 2:
+        print("Usage: python3 main.py 2nd argument required: 'holland' or 'nationaal'")
+        exit(1)
+    else:
+        print("Loading...")
+        # load the requested files
+        if argv[1] == "holland":
+            stations, connections = load_holland()
+            max_time = 120
+            size = "Holland"
+
+        if argv[1] == "nationaal":
+            stations, connections = load_nationaal()
+            max_time = 180
+            size = "Nationaal"
+
+    # make timetable and score
+    timetable = first_algorithm(connections, stations, max_time)
+    score = timetable.score
+
     for trajectory in timetable.trajectories:
         print(trajectory.itinerary)
 
-
-    score = timetable.score
+    for connectie in connections:
+        print(connectie)
+        print(connectie.traveled)
 
     # make map
-    size = "Nationaal"
     map(stations, connections, timetable.trajectories, size)
 
     header = ["train", "stations"]

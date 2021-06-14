@@ -53,16 +53,16 @@ def map(stations, connections, trajectories, size):
         x2 = station2.x
         y2 = station2.y
 
-        # check if traveled
-        if connection.traveled == True:
-            color = "b"
-        else:
-            color = "k"
-      
+        # # check if traveled
+        # if connection.traveled == True:
+        #     color = "b"
+        # else:
+        #     color = "k"
+        color = "k"
         # create lines between connections
         plt.plot([x1,x2], [y1,y2], color=color, transform=crs.PlateCarree())
 
-    colors = ["cornflowerblue", "tomato", "sienna", "deepskyblue", "firebrick", "palevioletred", "coral", "slategrey", "deeppink", "orange", "gold", "lightgreen", "olive", "darkkhaki", "seagreen", "burlywood", "saddlebrown", "darkslategrey", "slategrey", "grey"]
+    colors = ["purple", "tomato", "sienna", "rosybrown", "firebrick", "palevioletred", "coral", "slategrey", "deeppink", "orange", "gold", "lightgreen", "olive", "darkkhaki", "seagreen", "burlywood", "saddlebrown", "plum", "slategrey", "grey"]
     c = 0
 
     for trajectory in trajectories:
