@@ -25,9 +25,9 @@ class Timetable:
             # print(trajectory)
             # print(trajectory.total_time)
     
-        print(f"p:{p}")
-        print(f"T:{T}")
-
+        
+        print(f"p{p}")
+        print(f"T{T}")
         K = p*10000 - (T*100 + Min)
         return K
 

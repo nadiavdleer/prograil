@@ -10,7 +10,7 @@ import copy
 import random
 
 # Anne, Nadia, Sarah
-def baseline(connections, stations):
+def baseline(connections, stations, max_time):
     trajectories = []
     used_connections = []
     # available_stations = copy.deepcopy(stations)
@@ -44,13 +44,13 @@ def baseline(connections, stations):
             
             
             # ensure max 2h trajectory
-            if trajectory.total_time > 120:
+            if trajectory.total_time > max_time:
                 trajectory.remove_connection(new_connection)
                 new_connection.traveled = False
                 used_connections.remove(new_connection)
                 trajectories.append(trajectory)
                 break
 
-    #map(stations, connections, trajectories)
+   
    
     return trajectories

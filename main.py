@@ -1,26 +1,28 @@
-from code.classes.connection import Connection
-from code.classes.station import Station
-from code.classes.trajectory import Trajectory
-from code.classes.timetable import Timetable
-from code.loaders.loader import load_holland
-from code.algorithms.baseline import baseline
+from code.loaders.loader import load_holland, load_nationaal
 from code.algorithms.first_algorithm import first_algorithm
+from code.visualisation.map import map
 import csv
 
 if __name__ == "__main__":
-    stations, connections = load_holland()
+    # stations, connections = load_holland()
+    # max_time = 120
+    # max_trajectories = 7
+    # timetable = first_algorithm(connections, stations, max_time, max_trajectories)
+    # score = timetable.score
 
-    #trajectories = baseline(connections, stations)
-    
-    #new_timetable = Timetable(trajectories)
-    #score = new_timetable.quality(connections)
+    stations, connections = load_nationaal()
+    max_time = 180
+    max_trajectories = 20
+    timetable = first_algorithm(connections, stations, max_time, max_trajectories)
+    for trajectory in timetable.trajectories:
+        print(trajectory.itinerary)
 
-    timetable = first_algorithm(connections, stations)
+
     score = timetable.score
 
-    # for trajectory in trajectories:
-    #     for connection in trajectory.connections:
-    #         print(connection)
+    # make map
+    size = "Nationaal"
+    map(stations, connections, timetable.trajectories, size)
 
     header = ["train", "stations"]
     number = 1
@@ -46,6 +48,3 @@ if __name__ == "__main__":
     print("<_______|-|_______|")
     print(" /O-O-O     o   o")
     print("----------------------")
-
-    for trajectory in timetable.trajectories:
-        print(trajectory.itinerary)
