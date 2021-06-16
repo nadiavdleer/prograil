@@ -1,6 +1,7 @@
 from code.loaders.loader import load_holland, load_nationaal
 from code.algorithms.first_algorithm import first_algorithm
 from code.visualisation.map import map
+import matplotlib.pyplot as plt
 import csv
 from sys import argv
 
@@ -24,8 +25,13 @@ if __name__ == "__main__":
             size = "Nationaal"
 
     # make timetable and score
-    timetable = first_algorithm(connections, stations, max_time)
+    timetable, graph_moments = first_algorithm(connections, stations, max_time)
     score = timetable.score
+
+    plt.hist(graph_moments)
+    plt.xlabel("Run numer")
+    plt.ylabel("Frequency")
+    plt.plot()
 
     for trajectory in timetable.trajectories:
         print(trajectory.itinerary)

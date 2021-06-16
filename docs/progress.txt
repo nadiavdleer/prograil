@@ -35,3 +35,10 @@ Nadia opschonen repo.
 14 juni
 Anne, Sarah en Nadia hebben samen afgesproken en wederom via Live Share gewerkt. Dit keer aan verbetering van first_algorithm, zodat het ook werkt voor heel Nederland.
 Anne, Sarah en Nadia hebben command line arguments ingesteld zodat de gebruiker kan kiezen voor Holland of Nederland. De map heeft nu ook twee verschillende achtergronden; eentje voor Holland en eentje voor heel Nederland.
+
+15 juni
+Overleg over begeleidend document. Nadia heeft deze uitgewerkt en ingeleverd.
+
+16 juni
+In de ochtend gesprek met de mentoren. Daarna voorbereidingen voor presentatie in de middag.
+Overleg tweede algoritme.

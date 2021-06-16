@@ -1,14 +1,7 @@
 train,stations
-train_1,"['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Apeldoorn', 'Zutphen', 'Dieren', 'Arnhem Centraal', 'Ede-Wageningen', 'Utrecht Centraal', 'Amersfoort', 'Apeldoorn']"
-train_2,"['Rotterdam Centraal', 'Schiedam Centrum', 'Delft', 'Den Haag HS', 'Leiden Centraal', 'Den Haag Laan v NOI', 'Delft', 'Den Haag Centraal', 'Leiden Centraal', 'Heemstede-Aerdenhout', 'Haarlem', 'Amsterdam Sloterdijk', 'Amsterdam Centraal', 'Amsterdam Amstel', 'Amsterdam Zuid', 'Schiphol Airport', 'Leiden Centraal', 'Alphen a/d Rijn']"
-train_3,"['Lelystad Centrum', 'Almere Centrum', 'Amsterdam Centraal', 'Utrecht Centraal', 'Hilversum', 'Almere Centrum', 'Amsterdam Amstel', 'Utrecht Centraal', 'Gouda', 'Rotterdam Alexander']"
-train_4,"['Den Haag HS', 'Gouda', 'Den Haag Centraal']"
-train_5,"['Heerlen', 'Sittard', 'Maastricht']"
-train_6,"['Arnhem Centraal', 'Nijmegen', 'Oss', 's-Hertogenbosch', 'Tilburg', 'Breda', 'Etten-Leur', 'Roosendaal', 'Dordrecht', 'Rotterdam Blaak', 'Rotterdam Alexander', 'Rotterdam Centraal', 'Dordrecht', 'Breda']"
-train_7,"['Amsterdam Zuid', 'Amsterdam Sloterdijk', 'Zaandam', 'Castricum', 'Alkmaar', 'Hoorn', 'Zaandam', 'Beverwijk', 'Castricum']"
-train_8,"['Almelo', 'Zwolle', 'Steenwijk', 'Heerenveen', 'Leeuwarden', 'Groningen', 'Assen']"
-train_9,"['Den Haag Laan v NOI', 'Gouda', 'Alphen a/d Rijn', 'Utrecht Centraal', 's-Hertogenbosch', 'Eindhoven', 'Helmond', 'Venlo']"
-train_10,"['Sittard', 'Roermond', 'Weert', 'Eindhoven', 'Tilburg']"
-train_11,"['Rotterdam Blaak', 'Schiedam Centrum']"
-train_12,"['Zutphen', 'Deventer', 'Zwolle', 'Amersfoort']"
-score,6790.842696629214
+train_1,"['Den Helder', 'Alkmaar', 'Castricum', 'Zaandam', 'Amsterdam Sloterdijk', 'Amsterdam Centraal', 'Amsterdam Amstel', 'Amsterdam Zuid', 'Schiphol Airport', 'Leiden Centraal', 'Den Haag Centraal']"
+train_2,"['Rotterdam Centraal', 'Schiedam Centrum', 'Delft', 'Den Haag Centraal', 'Gouda', 'Rotterdam Alexander', 'Rotterdam Centraal', 'Dordrecht']"
+train_3,"['Gouda', 'Alphen a/d Rijn', 'Leiden Centraal', 'Heemstede-Aerdenhout', 'Haarlem', 'Amsterdam Sloterdijk', 'Amsterdam Zuid']"
+train_4,"['Beverwijk', 'Castricum']"
+train_5,"['Haarlem', 'Beverwijk', 'Zaandam', 'Hoorn', 'Alkmaar']"
+score,9119.0

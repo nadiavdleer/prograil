@@ -2,6 +2,8 @@ from code.algorithms.baseline import baseline
 from code.classes.timetable import Timetable
 
 def first_algorithm(connections, stations, max_time):
+    graph_moments = []
+    loop_number = 0
     best_timetable = None
     no_change = 0
  
@@ -34,11 +36,14 @@ def first_algorithm(connections, stations, max_time):
         #print(new_timetable.score)
         if best_timetable == None or new_timetable.score > best_timetable.score:
             best_timetable = new_timetable
+            graph_moments.append(loop_number)
             no_change = 0
+            # graph data
+
             print("NEW BEST SCORE")
 
         # end while if no change for certain amount of ronds
-        if no_change == 100000:
+        if no_change == 10000:
             break
         no_change += 1
 
@@ -46,4 +51,6 @@ def first_algorithm(connections, stations, max_time):
         for connection in connections:
             connection.traveled = False
 
-    return best_timetable
+        loop_number += 1
+
+    return best_timetable, graph_moments
