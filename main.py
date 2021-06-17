@@ -1,5 +1,6 @@
 from code.loaders.loader import load_holland, load_nationaal
 from code.algorithms.first_algorithm import first_algorithm
+from code.algorithms.second_algorithm import Second_algorithm
 from code.visualisation.map import map
 import matplotlib.pyplot as plt
 import csv
@@ -17,53 +18,58 @@ if __name__ == "__main__":
         if argv[1] == "holland":
             stations, connections = load_holland()
             max_time = 120
+            max_trajectories = 7
             size = "Holland"
 
         if argv[1] == "nationaal":
             stations, connections = load_nationaal()
             max_time = 180
+            max_trajectories = 20
             size = "Nationaal"
 
     # make timetable and score
-    timetable, graph_moments = first_algorithm(connections, stations, max_time)
-    score = timetable.score
+    # timetable, graph_moments = first_algorithm(connections, stations, max_time)
+    # score = timetable.score
 
-    plt.hist(graph_moments)
-    plt.xlabel("Run numer")
-    plt.ylabel("Frequency")
-    plt.plot()
+    # plt.hist(graph_moments)
+    # plt.xlabel("Run numer")
+    # plt.ylabel("Frequency")
+    # plt.plot()
 
-    for trajectory in timetable.trajectories:
-        print(trajectory.itinerary)
+    # for trajectory in timetable.trajectories:
+    #     print(trajectory.itinerary)
 
-    for connectie in connections:
-        print(connectie)
-        print(connectie.traveled)
+    # for connectie in connections:
+    #     print(connectie)
+    #     print(connectie.traveled)
+
+    second_algorithm = Second_algorithm(stations, connections)
+    second_algorithm.run(max_time, max_trajectories)
 
     # make map
-    map(stations, connections, timetable.trajectories, size)
+    # map(stations, connections, timetable.trajectories, size)
 
-    header = ["train", "stations"]
-    number = 1
-    with open('output.csv', 'w') as file:
-        writer = csv.writer(file)
-        writer.writerow(header)
-        for trajectory in timetable.trajectories:
-            writer.writerow([f"train_{number}", trajectory.itinerary])
-            number += 1
-        writer.writerow(["score", score])
+    # header = ["train", "stations"]
+    # number = 1
+    # with open('output.csv', 'w') as file:
+    #     writer = csv.writer(file)
+    #     writer.writerow(header)
+    #     for trajectory in timetable.trajectories:
+    #         writer.writerow([f"train_{number}", trajectory.itinerary])
+    #         number += 1
+    #     writer.writerow(["score", score])
 
-    print("   o O___ _________")
-    print(" _][__|o| |O O O O|")
-    print("<_______|-|_______|")
-    print(" /O-O-O     o   o")
-    print("----------------------")
-    print(f"Aantal trajecten: { len(timetable.trajectories) }") 
-    print("----------------------")
-    print(f"Score: {score}")
-    print("----------------------")
-    print("   o O___ _________")
-    print(" _][__|o| |O O O O|")
-    print("<_______|-|_______|")
-    print(" /O-O-O     o   o")
-    print("----------------------")
+    # print("   o O___ _________")
+    # print(" _][__|o| |O O O O|")
+    # print("<_______|-|_______|")
+    # print(" /O-O-O     o   o")
+    # print("----------------------")
+    # print(f"Aantal trajecten: { len(timetable.trajectories) }") 
+    # print("----------------------")
+    # print(f"Score: {score}")
+    # print("----------------------")
+    # print("   o O___ _________")
+    # print(" _][__|o| |O O O O|")
+    # print("<_______|-|_______|")
+    # print(" /O-O-O     o   o")
+    # print("----------------------")

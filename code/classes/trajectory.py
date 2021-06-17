@@ -7,6 +7,7 @@ class Trajectory:
         self.connections = []
         self.itinerary = [start.name]
         self.total_time = 0
+        self.score = 0
 
     # add a connection to the trajectory
     def add_connection(self, connection):
@@ -45,4 +46,22 @@ class Trajectory:
     
     def __str__(self):
         return f"start: {self.start} end: {self.end}"
+
+    def quality(self, connections):
+        p = 0
+        total_connections = 0 
+
+        for connection in connections:
+            total_connections += 1
+            if connection in self.connections:
+                p += 1
+                
+        p = p / total_connections
+
+        T = 1
+        Min = self.total_time
+    
+        K = p*10000 - (T*100 + Min)
+        return K
+
     

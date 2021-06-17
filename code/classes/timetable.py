@@ -7,7 +7,7 @@ class Timetable:
     def quality(self, connections):
         p = 0
         total_connections = 0
-        total_trajectories = 0
+        
         time = 0 
 
         for connection in connections:
