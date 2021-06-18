@@ -44,10 +44,16 @@ if __name__ == "__main__":
     #     print(connectie.traveled)
 
     second_algorithm = Second_algorithm(stations, connections)
-    second_algorithm.run(max_time, max_trajectories)
+    best_timetable = second_algorithm.run(max_time, max_trajectories)
+    print(best_timetable)
+    print(best_timetable.score)
+    print(len(best_timetable.trajectories))
+
+    for trajectory in best_timetable.trajectories:
+        print(trajectory.itinerary)
 
     # make map
-    # map(stations, connections, timetable.trajectories, size)
+    map(stations, connections, best_timetable.trajectories, size)
 
     # header = ["train", "stations"]
     # number = 1

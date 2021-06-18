@@ -12,17 +12,24 @@ class Timetable:
         for trajectory in self.trajectories:
             T += 1
             Min += trajectory.total_time 
+            print(trajectory.itinerary)
             for connection in trajectory.connections:
                 used_connections.append(connection)
+                
 
         p = 0
         total_connections = 0
+        # print("used_connections")
+        # print(used_connections)
         for connection in connections:
             total_connections += 1
             if connection in used_connections:
                 p += 1
-                
         p = p / total_connections
+        
+        print("qualiteit")
+        print(f'p{p}')
+        print(f"T{T}")
 
         K = p*10000 - (T*100 + Min)
         return K

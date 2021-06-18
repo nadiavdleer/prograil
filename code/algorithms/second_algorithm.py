@@ -24,11 +24,7 @@ class Second_algorithm():
 
             # add connections
             while True:
-                new_connection = None
-                for connection in trajectory.end.connections:
-                    if not connection.traveled:
-                        if new_connection == None or connection.time < new_connection.time:
-                            new_connection = connection
+                new_connection = random.choice(trajectory.end.connections)
                 
                 # end trajectory if no possible route
                 if new_connection == None:
@@ -62,42 +58,79 @@ class Second_algorithm():
         return trajectories
         
     
-    def sort_trajectories(self, trajectories):
-        trajectories.sort(key=lambda x: x.score, reverse=True)
-        return trajectories
+    def sort_score(self, objects):
+        objects.sort(key=lambda x: x.score, reverse=True)
+        return objects
 
     def breadth_beam(self, max_trajectories, trajectories): 
         all_timetables = []
         depth = max_trajectories
 
         queue = []
-        queue.append(Timetable([]))
+        queue.append(Timetable([])) 
 
         while len(queue) != 0:
             state = queue.pop(0)
-            print(f"state:{state}")
-            if len(state.trajectories) < depth:
-                for trajectory in trajectories:
-                    new_timetable = copy.deepcopy(state)
-                    new_timetable.trajectories.append(trajectory)
-                    queue.append(new_timetable)
-                    # groot probeem met traveled boolian --> kijken of we met trajectory connections lijst kunnen werken
-                    new_timetable.score = new_timetable.quality(self.connections)
-                # beam maken
-                # score controleren op nog beter worden
+            # print(f"state:{state}")
+            new_row = []
+        
+            for trajectory in trajectories:
+                print("begin for loop")
+                print(trajectory.itinerary)
 
-            print(f"Queue: {queue}")    
+                new_timetable = copy.copy(state)
+                new_timetable.trajectories = copy.copy(state.trajectories)
+                print("state")
+                for i in state.trajectories:
+                    print(i.itinerary)
+                
+                new_timetable.trajectories.append(trajectory)
+                old_score = new_timetable.score
+                print("NORMALE TOEVOEGING")
+                new_timetable.score = new_timetable.quality(self.connections)
+
+                # score controleren op nog beter worden
+                print(f"old score{old_score}")
+                print(f"new score {new_timetable.score}")
+                if old_score < new_timetable.score:
+                    new_row.append(new_timetable)
+                else:
+                    new_timetable.trajectories.remove(trajectory)
+                    print("SCORE NA ERAF HALEN")
+                    new_timetable.score = new_timetable.quality(self.connections)
+                    print(f"score: {new_timetable.score}")
+                    all_timetables.append(new_timetable)
+            print("uit for loop")
+            # beam 
+            sorted_row = self.sort_score(new_row)
+            if len(sorted_row) >= 2:
+                for i in range(2):
+                    queue.append(sorted_row[i])
+                    print(f"BEAM WAARDE!")
+                    print(sorted_row[i].score)
+            else:
+                for i in range(len(sorted_row)):
+                    queue.append(sorted_row[i])
+                    
+            
+
+
+            # print(f"Queue: {queue}")    
 
         return all_timetables
 
     def run(self, max_time, max_trajectories):
         trajectories = self.generate_random_trajectories(max_time)
-        print("generate done")
-        trajectories = self.sort_trajectories(trajectories)
-        print("sort done")
+        # print("generate done")
+        trajectories = self.sort_score(trajectories)
+        # print("sort done")
         
         all_timetables = self.breadth_beam(max_trajectories, trajectories)
 
-        best_timetable = None
+        print("alle eindwaarden")
+        for timetable in all_timetables:
+            print(timetable.score)
 
+        best_timetable = self.sort_score(all_timetables)[0]
+        
         return best_timetable
