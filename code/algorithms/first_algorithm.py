@@ -40,7 +40,7 @@ def first_algorithm(connections, stations, max_time):
             no_change = 0
             # graph data
 
-            print("NEW BEST SCORE")
+            # print("NEW BEST SCORE")
 
         # end while if no change for certain amount of ronds
         if no_change == 10000:
