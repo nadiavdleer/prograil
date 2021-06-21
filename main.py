@@ -58,7 +58,7 @@ if __name__ == "__main__":
         writer = csv.writer(file)
         writer.writerow(header)
         for trajectory in best_timetable.trajectories:
-            writer.writerow([f"train_{number}", trajectory.itinerary])
+            writer.writerow([f"train_{number}", "["+', '.join(trajectory.itinerary)+"]"])
             number += 1
         writer.writerow(["score", best_timetable.score])
 

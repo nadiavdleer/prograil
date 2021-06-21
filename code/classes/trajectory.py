@@ -1,4 +1,4 @@
-# by Nadia
+
 class Trajectory:
     # start = station object
     def __init__(self, start):              

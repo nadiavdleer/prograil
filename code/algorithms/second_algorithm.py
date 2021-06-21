@@ -82,6 +82,7 @@ class Second_algorithm():
                     new_timetable.trajectories.remove(trajectory)
                     new_timetable.score = new_timetable.quality(self.connections)
                     all_timetables.append(new_timetable)
+            
             # beam search
             sorted_row = self.sort_score(new_row)
             if len(sorted_row) >= 2:
