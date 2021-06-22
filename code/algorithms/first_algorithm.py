@@ -76,7 +76,7 @@ class First_algorithm():
         """
         plt.xlabel("Run number")
         plt.ylabel("Best timetable value")
-        plt.plot(x,y)
+        plt.scatter(x,y)
         plt.show()
         return 0
 

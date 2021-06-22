@@ -4,8 +4,10 @@ from code.algorithms.second_algorithm import Second_algorithm
 from code.visualisation.map import map
 import matplotlib.pyplot as plt
 import csv
+import time
 
 if __name__ == "__main__":
+    start_time = time.time()
 
     # ask user to choose data file 
     print("For North- and South-Holland, type 'holland'...")
@@ -66,6 +68,7 @@ if __name__ == "__main__":
     print(f"Amount of trajectories: { len(best_timetable.trajectories) }") 
     print("----------------------")
     print(f"Score: {best_timetable.score}")
+    print("--- %s seconds ---" % (time.time() - start_time))
     print("----------------------")
     print("   o O___ _________")
     print(" _][__|o| |O O O O|")
@@ -73,6 +76,7 @@ if __name__ == "__main__":
     print(" /O-O-O     o   o")
     print("----------------------")
     print("Loading map...")
+    
     
     # make map
     map(stations, connections, best_timetable.trajectories, size)
