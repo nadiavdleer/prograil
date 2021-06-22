@@ -22,3 +22,7 @@ To run the code:
     python3 main.py 
 
 After running this command, the user will be prompted with several questions to decide which data file and which algorithm he/she wants to use. 
+
+### Output example
+<img width="540" alt="Schermafbeelding 2021-06-22 om 14 40 52" src="https://user-images.githubusercontent.com/78795631/122926295-fdea1200-d367-11eb-90db-fa915182be22.png">
+<img width="295" alt="Schermafbeelding 2021-06-22 om 14 40 06" src="https://user-images.githubusercontent.com/78795631/122926309-02162f80-d368-11eb-9b10-e66a97f99c24.png">
