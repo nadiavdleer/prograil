@@ -58,7 +58,7 @@ class First_algorithm():
                 
 
             # end while if no change for certain amount of ronds
-            if no_change == NO_CHANGE_LIMIT:
+            if no_change_counter == NO_CHANGE_LIMIT:
                 break
             no_change_counter += 1
 
