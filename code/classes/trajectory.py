@@ -1,7 +1,8 @@
-
 class Trajectory:
-    # start = station object
-    def __init__(self, start):              
+    def __init__(self, start):
+        """
+         trajectory object is a collection of connections
+        """             
         self.start = start
         self.end = start
         self.connections = []
@@ -9,8 +10,10 @@ class Trajectory:
         self.total_time = 0
         self.score = 0
 
-    # add a connection to the trajectory
     def add_connection(self, connection):
+        """
+         add a connection to a trajectory
+        """
         self.connections.append(connection)
         self.total_time += connection.time
 
@@ -21,8 +24,10 @@ class Trajectory:
             self.end = connection.station1
             self.itinerary.append(self.end.name)
 
-    # remove connections
     def remove_connection(self, connection):
+        """
+         remove a connection from a trajectory
+        """
         self.connections.remove(connection)
         self.total_time -= connection.time
 
@@ -41,11 +46,11 @@ class Trajectory:
         elif self.start == connection.station2:
             self.start = connection.station1
             self.itinerary.remove(connection.station2.name)
-    
-    def __str__(self):
-        return f"start: {self.start} end: {self.end}"
 
     def quality(self, connections):
+        """
+         return quality score of a trajectory
+        """
         p = 0
         total_connections = 0 
 
@@ -55,9 +60,11 @@ class Trajectory:
                 p += 1
                 
         p = p / total_connections
-
         T = 1
         Min = self.total_time
-    
         K = p*10000 - (T*100 + Min)
+
         return K
+
+    def __str__(self):
+        return f"start: {self.start} end: {self.end}"

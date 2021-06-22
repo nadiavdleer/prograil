@@ -47,3 +47,15 @@ Overleg tweede algoritme. In de middag oefenpresentaties.
 Anne, Sarah en Nadia: brainstormen over tweede algoritme. 
 Anne, Sarah en Nadia: eerste opzet voor tweede algoritme. 
 Anne, Sarah en Nadia: plan maken voor morgen --> beam toevoegen en score berekenen 
+
+18 juni
+Sarah, Nadia en Anne: tweede algoritme afmaken
+Anne en Nadia in de Hands voor map
+
+21 juni
+Nadia eerste versie doc. Anne, Sarah en Nadia doc bespreken en aanpassen. Mentorgesprek in de middag, map gefikst bij Nadia
+
+22 juni
+Anne, Sarah en Nadia hebben comments toegevoegd in alle bestanden.
+Anne heeft de map en de grafieken verbeterd. 
+Nadia en Sarah hebben README.md geschreven. 

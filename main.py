@@ -1,16 +1,15 @@
 from code.loaders.loader import load_holland, load_nationaal
-from code.algorithms.first_algorithm import first_algorithm
+from code.algorithms.first_algorithm import First_algorithm
 from code.algorithms.second_algorithm import Second_algorithm
 from code.visualisation.map import map
 import matplotlib.pyplot as plt
 import csv
-from sys import argv
 
 if __name__ == "__main__":
 
     # ask user to choose data file 
-    print("For North- and South-Holland, type 'holland'")
-    print("For the entire Netherlands, type 'nationaal'")
+    print("For North- and South-Holland, type 'holland'...")
+    print("For the entire Netherlands, type 'nationaal'...")
     data_file = input("Choice: ")
     
     # load either holland or national file
@@ -29,26 +28,22 @@ if __name__ == "__main__":
         exit(1)
 
     # ask user to choose algorithm
-    print("Which algorithm would you like to run? For Hill Climber type '1', for Breadth First type '2'")
+    print("Which algorithm would you like to run? For Hill Climber type '1', for Breadth First type '2'...")
     algorithm = input("Choice: ")
     
     if algorithm == "1":
         print("Loading...")
         # run hill climber algorithm
-        best_timetable, graph_moments = first_algorithm(connections, stations, max_time)
+        first_algorithm = First_algorithm(stations, connections, max_time)
+        best_timetable = first_algorithm.run()
         
-        # give plot of change in best algorithm
-        plt.hist(graph_moments)
-        plt.xlabel("Run numer")
-        plt.ylabel("Frequency")
-        plt.plot()
     elif algorithm == "2":
         print("Loading...")
         # run constructive algorithm
         second_algorithm = Second_algorithm(stations, connections)
         best_timetable = second_algorithm.run(max_time, max_trajectories)
     else:
-        print("Please select an algorithm to run")
+        print("Please select an algorithm to run.")
         exit(1)
         
     # make output csv file

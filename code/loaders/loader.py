@@ -3,12 +3,14 @@ from code.classes.connection import Connection
 from code.classes.trajectory import Trajectory
 import csv
 
-# Nadia, Anne, Sarah
 def load_holland():
+    """
+      open data files for Holland and create station and connection objects 
+    """
     stations = {}
     connections = []
     
-    # open stations file
+    # open stations file and create station objects
     stations_file = csv.DictReader(open("./data/noord-zuid-holland/StationsHolland.csv"))
 
     for row in stations_file:
@@ -19,7 +21,7 @@ def load_holland():
         station = Station(x, y, name)
         stations[station.name] = station
 
-    # open connections file
+    # open connections file and create connection objects
     connections_file = csv.DictReader(open("./data/noord-zuid-holland/ConnectiesHolland.csv"))
 
     for row in connections_file:
@@ -34,19 +36,16 @@ def load_holland():
         stations[station1.name].connections.append(connection)
         stations[station2.name].connections.append(connection)
 
-    
-    # test trajectory
-    test_trajectory = Trajectory(stations['Alkmaar'])
-    test_trajectory.add_connection(stations["Alkmaar"].connections[0])
-    test_trajectory.remove_connection(stations["Alkmaar"].connections[0])
-
     return stations, connections
 
 def load_nationaal():
+    """
+     open data files for entire Netherlands and create station and connection objects 
+    """
     stations = {}
     connections = []
     
-    # open stations file
+    # open stations file and create station objects
     stations_file = csv.DictReader(open("./data/nederland/StationsNationaal.csv"))
 
     for row in stations_file:
@@ -57,7 +56,7 @@ def load_nationaal():
         station = Station(x, y, name)
         stations[station.name] = station
 
-    # open connections file
+    # open connections file and create connection objects
     connections_file = csv.DictReader(open("./data/nederland/ConnectiesNationaal.csv"))
 
     for row in connections_file:
