@@ -77,8 +77,8 @@ class Second_algorithm():
         print("Searching for best combination...")
         all_timetables = []
         queue = []
-        x_breadthbeam_progres = []
-        y_breadthbeam_progres = []
+        x_breadthbeam_progress = []
+        y_breadthbeam_progress = []
         depth_counter = 0
         BEAM_WIDTH = 2
         queue.append(Timetable([])) 
@@ -113,19 +113,19 @@ class Second_algorithm():
                     queue.append(sorted_row[i])
 
                     # add data to visualisation list
-                    x_breadthbeam_progres.append(depth_counter)
-                    y_breadthbeam_progres.append(sorted_row[i].score)
+                    x_breadthbeam_progress.append(depth_counter)
+                    y_breadthbeam_progress.append(sorted_row[i].score)
             else:
                 for i in range(len(sorted_row)):
                     queue.append(sorted_row[i])
 
                     # add data to visualisation list
-                    x_breadthbeam_progres.append(depth_counter)
-                    y_breadthbeam_progres(sorted_row[i].score)
+                    x_breadthbeam_progress.append(depth_counter)
+                    y_breadthbeam_progress.append(sorted_row[i].score)
 
             depth_counter += 1
                     
-        return all_timetables, x_breadthbeam_progres, y_breadthbeam_progres
+        return all_timetables, x_breadthbeam_progress, y_breadthbeam_progress
 
     def breadthbeam_progress(self, x, y):
         """
