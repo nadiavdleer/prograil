@@ -1,5 +1,5 @@
 # ProgRail
-The function of this README.md is to introduce the RailNL-case and to provide an explanation on the chosen approach and how to execute the algorithms given in this repository.
+The function of this README.md is to introduce the RailNL-case, to provide an explanation on the chosen approach and how to execute the algorithms given in this repository.
 
 ## Getting Started
 ### Assignment
